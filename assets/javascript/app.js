@@ -1,7 +1,7 @@
-        var number = 10; // Time allowed in Trivia game in seconds
+var number = 10; // Time allowed in Trivia game in seconds
         var a = new Array(8); //a[i] is the status of i-th question. -1 if unanswered, 0 if incorrect, 1 if correct
         for (var i = 0; i < a.length; i++){ // set initial value of a[i] to -1 (unanswered)
-		    a[i] = -1;
+            a[i] = -1;
         }
         var correct = 0, incorrect = 0, unanswered = 0; // correct/incorrect/unanswered = Total number of correct/incorrect/unanswered answers
         $('#A11').on('click', loss1); // function call for button click for A11, loss1 for incorrect outcome, win1 for correct outcome
@@ -102,12 +102,20 @@
             if (number === 0){ // Excute once timer expires
                 stop();
                 for (var i = 0; i < a.length; i++){
-		 			if (a[i] == -1) unanswered++; // Get total # of unanswered
-		 			if (a[i] == 0) incorrect++; // Get total # of incorrect
-		 			if (a[i] == 1) correct++; // Get total # of correct
-				}
-                alert('All Done!' + "\nCorrect Answers: " + correct
-                + "\nIncorrect Answers: " + incorrect + "\nUnanswered: " + unanswered );
+                    if (a[i] == -1) unanswered++; // Get total # of unanswered
+                    if (a[i] == 0) incorrect++; // Get total # of incorrect
+                    if (a[i] == 1) correct++; // Get total # of correct
+                }
+
+
+            $('#show-time2').html('<h2>' + "All Done!" + "\nCorrect Answers: " + correct + "\nIncorrect Answers: "
+                + incorrect + "\nUnanswered: " + unanswered);
+
+
+            window.location = "indexresults.html";
+
+                //alert('All Done!' + "\nCorrect Answers: " + correct
+                //+ "\nIncorrect Answers: " + incorrect + "\nUnanswered: " + unanswered );  \n is new line
             }
         }
         function stop(){
