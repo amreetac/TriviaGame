@@ -93,6 +93,7 @@ var number = 10; // Time allowed in Trivia game in seconds
              a[7] = 0;
         }
 
+
         function run(){
             counter = setInterval(decrement, 1000); //decrement function is called every 1000 ms or 1 second
         }
@@ -112,9 +113,9 @@ var number = 10; // Time allowed in Trivia game in seconds
                 + incorrect + "\nUnanswered: " + unanswered);
 
 
-            window.location = "indexresults.html";
+            //window.location = "indexresults.html";
 
-                //alert('All Done!' + "\nCorrect Answers: " + correct
+               // alert('All Done!' + "\nCorrect Answers: " + correct
                 //+ "\nIncorrect Answers: " + incorrect + "\nUnanswered: " + unanswered );  \n is new line
             }
         }
