@@ -1,0 +1,32 @@
+<html>
+<head>
+<title> DIV Buttons </title>
+<script type="text/javascript">
+// From: http://www.webdeveloper.com/forum/showthread.php?p=1148532#post1148532
+
+function selectBtn(IDS) {
+  var sel = document.getElementById('DIVbtns').getElementsByTagName('div');
+  for (var i=0; i<sel.length; i++) {
+	sel[i].style.backgroundColor = "yellow";
+  }
+  document.getElementById(IDS).style.backgroundColor = 'cyan';
+}
+
+</script>
+<style type="text/css">
+  .btnDIV { height:50px; width:100px; border:1px solid black; }
+  #button1 { background-Color: yellow; }
+  #button2 { background-Color: yellow; }
+  #button3 { background-Color: yellow; }
+</style>
+</head>
+<body>
+
+<div id="DIVbtns">
+<div id="button1" class="btnDIV" onclick="selectBtn(this.id)">Button 1</div><br>
+<div id="button2" class="btnDIV" onclick="selectBtn(this.id)">Button 2</div><br>
+<div id="button3" class="btnDIV" onclick="selectBtn(this.id)">Button 3</div>
+</div>
+
+</body>
+</html>

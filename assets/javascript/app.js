@@ -97,6 +97,9 @@ var number = 10; // Time allowed in Trivia game in seconds
         function run(){
             counter = setInterval(decrement, 1000); //decrement function is called every 1000 ms or 1 second
         }
+
+    
+
         function decrement(){
             number--; // reduce number by 1
             $('#show-time').html('<h2>' + "Time Remaining: " + number + " Seconds" + '</h2>'); //Shows time remaining in seconds
@@ -112,6 +115,8 @@ var number = 10; // Time allowed in Trivia game in seconds
             $('#show-time2').html('<h2>' + "All Done!" + "\nCorrect Answers: " + correct + "\nIncorrect Answers: "
                 + incorrect + "\nUnanswered: " + unanswered);
 
+            $('#show-time1').hide();
+
 
             //window.location = "indexresults.html";
 
@@ -122,4 +127,5 @@ var number = 10; // Time allowed in Trivia game in seconds
         function stop(){
             clearInterval(counter);
         }
-        run(); // only line in main besides variable declaration. Executed after web-page is opened
+        run(); // only line in main (in terms of scope, main is a concept in other languages)
+        // besides variable declaration. Executed after web-page is opened
