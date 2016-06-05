@@ -1,4 +1,5 @@
 var number = 30; // Time allowed in Trivia game in seconds
+var A100 = document.getElementById("A100");
         var a = new Array(8); //a[i] is the status of i-th question. -1 if unanswered, 0 if incorrect, 1 if correct
         for (var i = 0; i < a.length; i++){ // set initial value of a[i] to -1 (unanswered)
             a[i] = -1;
@@ -103,7 +104,7 @@ var number = 30; // Time allowed in Trivia game in seconds
         function decrement(){
             number--; // reduce number by 1
             $('#show-time').html('<h2>' + "Time Remaining: " + number + " Seconds" + '</h2>'); //Shows time remaining in seconds
-            if (number === 0){ // Excute once timer expires
+            if (number === 0){ // Excute once timer expires 
                 stop();
                 for (var i = 0; i < a.length; i++){
                     if (a[i] == -1) unanswered++; // Get total # of unanswered
@@ -117,10 +118,7 @@ var number = 30; // Time allowed in Trivia game in seconds
             $('#show-time1').hide();
 
 
-            //window.location = "indexresults.html";
-
-               // alert('All Done!' + "\nCorrect Answers: " + correct
-                //+ "\nIncorrect Answers: " + incorrect + "\nUnanswered: " + unanswered );  \n is new line
+            
             }
         }
         function stop(){
