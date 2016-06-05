@@ -1,4 +1,4 @@
-var number = 10; // Time allowed in Trivia game in seconds
+var number = 30; // Time allowed in Trivia game in seconds
         var a = new Array(8); //a[i] is the status of i-th question. -1 if unanswered, 0 if incorrect, 1 if correct
         for (var i = 0; i < a.length; i++){ // set initial value of a[i] to -1 (unanswered)
             a[i] = -1;
@@ -114,7 +114,6 @@ var number = 10; // Time allowed in Trivia game in seconds
 
             $('#show-time2').html('<h2>' + "All Done!" + "\nCorrect Answers: " + correct + "\nIncorrect Answers: "
                 + incorrect + "\nUnanswered: " + unanswered);
-
             $('#show-time1').hide();
 
 
